@@ -1,5 +1,6 @@
 <template>
   <div>
+    <date-picker />
     <main-menu />
   </div>
 
@@ -7,11 +8,13 @@
 
 <script>
 import MainMenu from 'components/MainMenu'
+import datePicker from 'components/datePicker'
 
 export default {
   name: 'MainLayout',
   components: {
-    MainMenu
+    MainMenu,
+    datePicker
 
   },
   data () {

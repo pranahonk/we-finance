@@ -2,7 +2,7 @@
   "name": "finance",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "productName": "We Finance",
   "author": "prana.wijaya <prana.2015013004@univ.atmajaya.ac.id>",
   "private": true,
   "scripts": {
