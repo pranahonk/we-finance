@@ -3,30 +3,29 @@
     <q-layout>
       <q-page-container>
         <div class="text-weight-bolder text-h6">Daily transaction</div>
-        <div class="q-mt-sm">
-          <span class="q-ml-sm" v-for="(item, index) in oneWeek" :key="index">
-            {{ item.day }}
+        <div class="flex justify-between">
+          <div v-for="(item, index) in oneWeek" :key="index" class="q-mt-sm q-mr-xs inline-block">
+          <span class="q-ml-sm">
+           {{ item.day | convertDay }}
           </span>
-          <div class="datePicker__circle" v-for="(item, index) in oneWeek" :key="index">
-            {{ item.date }}
+            <div :class="item.date === date ? 'datePicker__circle active' : 'datePicker__circle'">
+              {{ item.date }}
+            </div>
           </div>
         </div>
       </q-page-container>
     </q-layout>
-    <!--    <q-date-->
-    <!--      v-model="date"-->
-    <!--      first-day-of-week="1"-->
-    <!--      today-btn-->
-    <!--    />-->
   </div>
 </template>
 
 <script>
+import globalMixin from '../mixins/globalMixins'
 export default {
   name: 'dateePicker',
+  mixins: [globalMixin],
   data () {
     return {
-      date: '2020/08/11',
+      date: null,
       oneWeek: []
     }
   },
@@ -43,6 +42,7 @@ export default {
   methods: {
     dateNow: function (days, minus) {
       const now = new Date()
+      this.date = now.getDate()
       const minDate = minus ? new Date(now.getTime() - (days * 24 * 60 * 60 * 1000)) : new Date(now.getTime() + (days * 24 * 60 * 60 * 1000))
       const dayName = minDate.getDay()
       const date = minDate.getDate()
@@ -65,7 +65,14 @@ export default {
     text-align: center;
     border-radius: 50%;
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+.active {
+  background-color: rgb(97, 62, 234);
+  color: white;
 }
 
 </style>
