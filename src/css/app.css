@@ -14,7 +14,10 @@ body {
   height: 70px;
   padding: 0 15px;
   background-color: #FFFFFF;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
+
 .main-menu__icon {
   font-size: 2rem;
   color: #A6AAB4;

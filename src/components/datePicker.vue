@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md">
+  <div class="q-pa-md datePicker__bgColor">
     <q-layout>
       <q-page-container>
         <div class="text-weight-bolder text-h6">Daily transaction</div>
@@ -20,6 +20,7 @@
 
 <script>
 import globalMixin from '../mixins/globalMixins'
+
 export default {
   name: 'dateePicker',
   mixins: [globalMixin],
@@ -67,6 +68,13 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__bgColor {
+    background-color: white;
+    max-height: 150px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
   }
 }
 
