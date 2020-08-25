@@ -1,6 +1,7 @@
 <template>
   <div>
     <date-picker />
+    <div>Your Balance</div>
     <main-menu />
     <card-list-carousel />
   </div>

@@ -6,7 +6,6 @@
       transition-next="slide-left"
       swipeable
       animated
-      navigation
       padding
       arrows
       control-color="primary"
