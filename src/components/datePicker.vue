@@ -82,5 +82,4 @@ export default {
   background-color: rgb(97, 62, 234);
   color: white;
 }
-
 </style>

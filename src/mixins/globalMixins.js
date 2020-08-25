@@ -21,6 +21,10 @@ const data = {
         default:
           return false
       }
+    },
+    convertCardNum: function (val) {
+      const toString = val.toString()
+      return toString.match(/.{1,4}/g).join(' - ')
     }
   }
 }
